@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">NoteApplication</string>
+    <string name="discover_btn">Discover the platform</string>
+    <string name="my_notes">My Notes</string>
+    <string name="tv_login">You have an account ? Log-in</string>
+    <string name="tv_skip">Skip</string>
+    <string name="unb_text_step1">Find projects from companies everywhere in the word</string>
+    <string name="unb_text_step2">Make money while working on awesome projects</string>
+    <string name="unb_text_step3">Chat with others freelancers and develop your network</string>
+    <string name="unb_text_step4">Work hard and level up!</string>
+    <string name="unb_text_step5">Enjoy your progress!</string>
+    <string name="log_in">Log-in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign-up</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="tv_return_to_sign_up">Return to Sign-up</string>
 </resources>
