@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="d_16dp">16dp</dimen>
+    <dimen name="d_20dp">20dp</dimen>
+    <dimen name="d_24dp">24dp</dimen>
+    <dimen name="d_25sp">25sp</dimen>>
+    <dimen name="d_36dp">36dp</dimen>
+    <dimen name="d_40dp">40dp</dimen>
+    <dimen name="btn_width">264dp</dimen>
+    <dimen name="btn_height">54dp</dimen>
+</resources>

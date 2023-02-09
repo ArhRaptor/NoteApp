@@ -16,4 +16,6 @@
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="tv_return_to_sign_up">Return to Sign-up</string>
+    <string name="obligatory_field">Обязательное поле!</string>
+    <string name="error_name">Проверьте корректность ввода</string>
 </resources>
