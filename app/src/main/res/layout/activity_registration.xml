@@ -34,15 +34,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/d_24dp"
-                android:layout_marginEnd="@dimen/d_24dp"
                 android:hint="@string/first_name"
                 app:errorEnabled="true"
                 app:counterEnabled="true"
                 app:counterMaxLength="@integer/et_max_length"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/EditTextStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -53,15 +49,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_surname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/d_24dp"
-                android:layout_marginEnd="@dimen/d_24dp"
                 android:hint="@string/last_name"
                 app:errorEnabled="true"
                 app:counterEnabled="true"
                 app:counterMaxLength="@integer/et_max_length"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/EditTextStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -72,13 +64,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/d_24dp"
-                android:layout_marginEnd="@dimen/d_24dp"
                 android:hint="@string/email"
                 app:errorEnabled="true"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/EditTextStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -89,15 +77,11 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/d_24dp"
-                android:layout_marginEnd="@dimen/d_24dp"
                 android:hint="@string/password"
-                android:inputType="textPassword"
+                app:errorIconDrawable="@null"
                 app:errorEnabled="true"
                 app:endIconMode="password_toggle"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/EditTextStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -112,12 +96,8 @@
 
     <Button
         android:id="@+id/btn_sign_up"
-        android:layout_width="@dimen/btn_width"
-        android:layout_height="@dimen/btn_height"
-        android:layout_marginBottom="@dimen/d_36dp"
         android:text="@string/sign_up"
-        android:textAllCaps="false"
-        app:cornerRadius="@dimen/d_20dp"
+        style="@style/MainButton"
         app:layout_constraintBottom_toTopOf="@+id/tv_login"
         app:layout_constraintEnd_toEndOf="@+id/tv_login"
         app:layout_constraintStart_toStartOf="@+id/tv_login" />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/d_24dp</item>
+        <item name="android:layout_marginEnd">@dimen/d_24dp</item>
+        <item name="boxBackgroundColor">@color/et_background_color</item>
+    </style>
+
+    <style name="MainButton">
+        <item name="android:layout_width">@dimen/btn_width</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:layout_marginBottom">@dimen/d_36dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/d_20dp</item>
+    </style>
+
+    <style name="UnboardingImage">
+        <item name="android:layout_width">@dimen/d_0dp</item>
+        <item name="android:layout_height">@dimen/d_0dp</item>
+        <item name="android:layout_marginStart">@dimen/d_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/d_16dp</item>
+        <item name="android:layout_marginTop">@dimen/d_8dp</item>
+        <item name="android:layout_marginBottom">@dimen/d_8dp</item>
+    </style>
+
+    <style name="TextViewSkip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/d_16dp</item>
+        <item name="android:text">@string/tv_skip</item>
+    </style>
+
+    <style name="UnboardingAppName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/d_60dp</item>
+        <item name="android:text">@string/my_notes</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/d_30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UnboardingBottomText">
+        <item name="android:layout_width">@dimen/unb_bottom_text_width</item>
+        <item name="android:layout_height">@dimen/unb_bottom_text_height</item>
+        <item name="android:layout_marginBottom">@dimen/d_72dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>
