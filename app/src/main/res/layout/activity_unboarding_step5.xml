@@ -8,46 +8,29 @@
 
     <TextView
         android:id="@+id/tv_skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        style="@style/TextViewSkip"
         android:text="@string/tv_skip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_appName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/my_notes"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        style="@style/UnboardingAppName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_discription"
-        android:layout_width="253dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="72dp"
+        style="@style/UnboardingBottomText"
         android:text="@string/unb_text_step5"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iv_earth"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        style="@style/UnboardingImage"
         android:src="@drawable/ic_heart"
         app:layout_constraintBottom_toTopOf="@+id/tv_discription"
         app:layout_constraintEnd_toEndOf="parent"

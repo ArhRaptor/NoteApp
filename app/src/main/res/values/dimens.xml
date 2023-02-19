@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="d_0dp">0dp</dimen>
+    <dimen name="d_8dp">8dp</dimen>
     <dimen name="d_16dp">16dp</dimen>
     <dimen name="d_20dp">20dp</dimen>
     <dimen name="d_24dp">24dp</dimen>
     <dimen name="d_25sp">25sp</dimen>>
     <dimen name="d_36dp">36dp</dimen>
     <dimen name="d_40dp">40dp</dimen>
+    <dimen name="d_40sp">40sp</dimen>
+    <dimen name="d_60dp">60sp</dimen>
     <dimen name="btn_width">264dp</dimen>
     <dimen name="btn_height">54dp</dimen>
+    <dimen name="d_30sp">30sp</dimen>
+    <dimen name="unb_bottom_text_width">254dp</dimen>
+    <dimen name="unb_bottom_text_height">58dp</dimen>
+    <dimen name="d_72dp">72dp</dimen>
 </resources>

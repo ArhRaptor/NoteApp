@@ -15,24 +15,24 @@ class AuthorizationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authorization)
 
-        val til_login = findViewById<TextInputLayout>(R.id.til_email)
-        val et_login: EditText? = til_login.editText
-        et_login?.doAfterTextChanged {
-            til_login.error = null
+        val tilLogin = findViewById<TextInputLayout>(R.id.til_email)
+        val etLogin: EditText? = tilLogin.editText
+        etLogin?.doAfterTextChanged {
+            tilLogin.error = null
         }
 
-        val til_pass = findViewById<TextInputLayout>(R.id.til_password)
-        val et_pass: EditText? = til_pass.editText
-        et_pass?.doAfterTextChanged {
-            til_pass.error = null
+        val tilPassword = findViewById<TextInputLayout>(R.id.til_password)
+        val etPassword: EditText? = tilPassword.editText
+        etPassword?.doAfterTextChanged {
+            tilPassword.error = null
         }
 
         findViewById<Button>(R.id.btn_login).setOnClickListener {
-            if (et_login?.text.toString().isEmpty()) {
-                til_login.error = getString(R.string.obligatory_field)
+            if (etLogin?.text.toString().isEmpty()) {
+                tilLogin.error = getString(R.string.obligatory_field)
             }
-            if (et_pass?.text.toString().isEmpty()) {
-                til_pass.error = getString(R.string.obligatory_field)
+            if (etPassword?.text.toString().isEmpty()) {
+                tilPassword.error = getString(R.string.obligatory_field)
             } else {
                 Toast.makeText(applicationContext, "Все ок!!!! ", Toast.LENGTH_SHORT)
                     .show()
