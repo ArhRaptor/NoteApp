@@ -18,4 +18,20 @@
     <string name="tv_return_to_sign_up">Return to Sign-up</string>
     <string name="obligatory_field">Обязательное поле!</string>
     <string name="error_name">Ошибка ввода</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="add">Add</string>
+    <string name="back">Back</string>
+    <string name="add_note">Add note</string>
+    <string name="add_new">Add new</string>
+    <string name="logout">Logout</string>
+    <string name="date">Date</string>
+    <string name="alert_fill_fields">Заполните все поля!</string>
+    <string name="select_date">Выберите дату</string>
+    <string name="note_add">Заметка добавлена</string>
+    <string name="attentionon">Внимание!!!</string>
+    <string name="is_delete">Вы действительно хотите удалить данную запись?</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="ok">Ok</string>
 </resources>
