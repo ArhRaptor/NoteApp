@@ -1,4 +1,4 @@
-package com.example.noteapplication.fragments
+package com.example.noteapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
+import com.example.noteapplication.ui.list.NotesListFragment
 import com.google.android.material.textfield.TextInputLayout
 
 class AuthorizationFragment : Fragment() {

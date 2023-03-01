@@ -1,8 +1,8 @@
-package com.example.noteapplication
+package com.example.noteapplication.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.noteapplication.fragments.SplashFragment
+import com.example.noteapplication.R
 
 class MainActivity: AppCompatActivity() {
 

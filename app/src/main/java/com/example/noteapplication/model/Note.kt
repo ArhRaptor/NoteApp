@@ -1,4 +1,4 @@
-package com.example.noteapplication
+package com.example.noteapplication.model
 
 import java.util.Date
 

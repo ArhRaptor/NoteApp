@@ -1,19 +1,16 @@
-package com.example.noteapplication.fragments
+package com.example.noteapplication.ui.list
 
 import android.annotation.SuppressLint
-import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.noteapplication.Note
-import com.example.noteapplication.NotesStorage
+import com.example.noteapplication.model.Note
+import com.example.noteapplication.db.NotesStorage
 import com.example.noteapplication.R
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker

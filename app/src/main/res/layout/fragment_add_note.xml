@@ -6,7 +6,7 @@
     android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddNoteFragment">
+    tools:context=".ui.list.AddNoteFragment">
 
     <TextView
         android:id="@+id/tv_back"
