@@ -9,17 +9,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
+import com.example.noteapplication.extencions.replaceFragment
 
 private var index = 0
 
-class UnboardingStepFragment : Fragment() {
+class OnbordingStepFragment : Fragment() {
 
     private val fragments = arrayOf(
-        R.layout.fragment_unboarding_step1,
-        R.layout.fragment_unboarding_step2,
-        R.layout.fragment_unboarding_step3,
-        R.layout.fragment_unboarding_step4,
-        R.layout.fragment_unboarding_step5)
+        R.layout.fragment_onbording_step1,
+        R.layout.fragment_onbording_step2,
+        R.layout.fragment_onbording_step3,
+        R.layout.fragment_onbording_step4,
+        R.layout.fragment_onbording_step5)
 
     private val handler = Handler()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -40,17 +41,13 @@ class UnboardingStepFragment : Fragment() {
             if (index == fragments.size) {
                 finishList()
             }else{
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fv_container, UnboardingStepFragment())
-                    .commit()
+                parentFragmentManager.replaceFragment(R.id.fv_container, OnbordingStepFragment())
             }
         }, 6000)
     }
 
     private fun finishList(){
         handler.removeCallbacksAndMessages(null)
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fv_container, AuthorizationFragment())
-            .commit()
+        parentFragmentManager.replaceFragment(R.id.fv_container, AuthorizationFragment())
     }
 }

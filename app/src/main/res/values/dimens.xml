@@ -16,4 +16,6 @@
     <dimen name="unb_bottom_text_width">254dp</dimen>
     <dimen name="unb_bottom_text_height">58dp</dimen>
     <dimen name="d_72dp">72dp</dimen>
+    <dimen name="d_36sp">36sp</dimen>
+    <dimen name="d_20sp">20sp</dimen>
 </resources>

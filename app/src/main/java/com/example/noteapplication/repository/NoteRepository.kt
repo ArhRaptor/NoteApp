@@ -12,4 +12,10 @@ class NoteRepository {
     fun getNotesList(): ArrayList<Note> {
         return NotesStorage.notesList
     }
+
+    fun getCountNotes() : Int = NotesStorage.notesList.size
+
+    fun deleteAllNotes() {
+        NotesStorage.notesList.clear()
+    }
 }

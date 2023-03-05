@@ -10,32 +10,31 @@
     <TextView
         android:id="@+id/tv_skip"
         style="@style/TextViewSkip"
-        android:text="@string/tv_skip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_appName"
-        style="@style/UnboardingAppName"
+        style="@style/OnbordingAppName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_discription"
-        style="@style/UnboardingBottomText"
-        android:text="@string/unb_text_step1"
+        style="@style/OnbordingBottomText"
+        android:text="@string/unb_text_step2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iv_earth"
-        android:src="@drawable/ic_earth"
-        style="@style/UnboardingImage"
+        style="@style/OnbordingImage"
+        android:src="@drawable/ic_money"
         app:layout_constraintBottom_toTopOf="@+id/tv_discription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appName"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_appName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

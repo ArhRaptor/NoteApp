@@ -1,4 +1,4 @@
-package com.example.noteapplication.ui
+package com.example.noteapplication.ui.list
 
 import android.annotation.SuppressLint
 import android.view.View

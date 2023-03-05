@@ -31,7 +31,13 @@
     <string name="note_add">Заметка добавлена</string>
     <string name="attentionon">Внимание!!!</string>
     <string name="is_delete">Вы действительно хотите удалить данную запись?</string>
+    <string name="is_all_delete">Вы действительно хотите удалить все заметки?</string>
     <string name="delete">Удалить</string>
     <string name="cancel">Отмена</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
+    <string name="profile">Profile</string>
+    <string name="all_notes">All Notes</string>
+    <string name="delete_profile">Delete profile</string>
+    <string name="delete_all_notes">Delete all notes</string>
+    <string name="search">Search</string>
 </resources>
