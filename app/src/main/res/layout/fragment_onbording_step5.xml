@@ -16,23 +16,23 @@
 
     <TextView
         android:id="@+id/tv_appName"
-        style="@style/UnboardingAppName"
+        style="@style/OnbordingAppName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_discription"
-        style="@style/UnboardingBottomText"
-        android:text="@string/unb_text_step3"
+        style="@style/OnbordingBottomText"
+        android:text="@string/unb_text_step5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iv_earth"
-        style="@style/UnboardingImage"
-        android:src="@drawable/ic_phones"
+        style="@style/OnbordingImage"
+        android:src="@drawable/ic_heart"
         app:layout_constraintBottom_toTopOf="@+id/tv_discription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

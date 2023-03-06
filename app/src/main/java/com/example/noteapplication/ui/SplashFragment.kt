@@ -1,4 +1,4 @@
-package com.example.noteapplication.fragments
+package com.example.noteapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
+import com.example.noteapplication.extencions.replaceFragment
 
 class SplashFragment : Fragment() {
 
@@ -19,15 +20,11 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.btn_discover).setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fv_container, UnboardingStepFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.fv_container, OnbordingStepFragment())
         }
 
         view.findViewById<TextView>(R.id.tv_login).setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fv_container, AuthorizationFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.fv_container, AuthorizationFragment())
         }
 
     }

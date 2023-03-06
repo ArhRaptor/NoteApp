@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <TextView
         android:id="@+id/tv_skip"
         style="@style/TextViewSkip"
@@ -16,26 +15,26 @@
 
     <TextView
         android:id="@+id/tv_appName"
-        style="@style/UnboardingAppName"
+        style="@style/OnbordingAppName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_discription"
-        style="@style/UnboardingBottomText"
-        android:text="@string/unb_text_step4"
+        style="@style/OnbordingBottomText"
+        android:text="@string/unb_text_step1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iv_earth"
-        style="@style/UnboardingImage"
-        android:src="@drawable/ic_level_up"
+        android:src="@drawable/ic_earth"
+        style="@style/OnbordingImage"
         app:layout_constraintBottom_toTopOf="@+id/tv_discription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appName" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_appName"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.noteapplication.fragments
+package com.example.noteapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
+import com.example.noteapplication.extencions.replaceFragment
+import com.example.noteapplication.ui.dashboard.DashboardFragment
 import com.google.android.material.textfield.TextInputLayout
 
 class AuthorizationFragment : Fragment() {
@@ -39,16 +41,12 @@ class AuthorizationFragment : Fragment() {
             if (etPassword?.text.toString().isEmpty()) {
                 tilPassword.error = getString(R.string.obligatory_field)
             } else {
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fv_container, NotesListFragment())
-                    .commit()
+                parentFragmentManager.replaceFragment(R.id.fv_container, DashboardFragment())
             }
         }
 
         view.findViewById<TextView>(R.id.tv_sign_up).setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fv_container, RegistrationFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.fv_container, RegistrationFragment())
         }
     }
 }

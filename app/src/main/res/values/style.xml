@@ -17,7 +17,7 @@
         <item name="cornerRadius">@dimen/d_20dp</item>
     </style>
 
-    <style name="UnboardingImage">
+    <style name="OnbordingImage">
         <item name="android:layout_width">@dimen/d_0dp</item>
         <item name="android:layout_height">@dimen/d_0dp</item>
         <item name="android:layout_marginStart">@dimen/d_16dp</item>
@@ -33,7 +33,7 @@
         <item name="android:text">@string/tv_skip</item>
     </style>
 
-    <style name="UnboardingAppName">
+    <style name="OnbordingAppName">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/d_60dp</item>
@@ -43,10 +43,18 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="UnboardingBottomText">
+    <style name="OnbordingBottomText">
         <item name="android:layout_width">@dimen/unb_bottom_text_width</item>
         <item name="android:layout_height">@dimen/unb_bottom_text_height</item>
         <item name="android:layout_marginBottom">@dimen/d_72dp</item>
         <item name="android:gravity">center</item>
     </style>
+    
+    <style name="DashboardHead">
+        <item name="android:textSize">@dimen/d_36sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/d_16dp</item>
+    </style>
+
 </resources>

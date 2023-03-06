@@ -1,4 +1,4 @@
-package com.example.noteapplication.fragments
+package com.example.noteapplication.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
+import com.example.noteapplication.extencions.replaceFragment
 import com.example.noteapplication.isValidEmail
 import com.example.noteapplication.isValidName
 import com.example.noteapplication.isValidPassword
@@ -19,7 +20,7 @@ import com.google.android.material.textfield.TextInputLayout
 class RegistrationFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return LayoutInflater.from(requireContext()).inflate(R.layout.fragment_registration, container, false)
+        return inflater.inflate(R.layout.fragment_registration, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -71,9 +72,7 @@ class RegistrationFragment : Fragment() {
         }
 
         view.findViewById<TextView>(R.id.tv_login).setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fv_container, RegistrationFragment())
-                .commit()
+            parentFragmentManager.replaceFragment(R.id.fv_container, AuthorizationFragment())
         }
     }
 }
