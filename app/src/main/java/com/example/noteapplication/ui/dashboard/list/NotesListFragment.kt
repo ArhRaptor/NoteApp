@@ -1,4 +1,4 @@
-package com.example.noteapplication.ui.list
+package com.example.noteapplication.ui.dashboard.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +15,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class NotesListFragment : Fragment() {
 
-    private val viewModel:ListViewModel by viewModels()
+    private val viewModel: ListViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_notes_list, container, false)
@@ -24,10 +24,18 @@ class NotesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.noteList.observe(viewLifecycleOwner){
-            setRecyclerView(it, view)
+        viewModel.run {
+            noteList.observe(viewLifecycleOwner){
+                setRecyclerView(it as ArrayList<Note>, view)
+            }
+
+            userId.observe(viewLifecycleOwner){
+                viewModel.loadNotes(it)
+            }
+
+            getUserId(viewModel.getUser()?.email ?: "")
         }
-        viewModel.loadNotes()
+
     }
 
    private fun setRecyclerView(notes:ArrayList<Note>, view:View){
@@ -50,6 +58,7 @@ class NotesListFragment : Fragment() {
                    .setTitle(getString(R.string.attentionon))
                    .setMessage(getString(R.string.is_delete))
                    .setPositiveButton(getString(R.string.delete)){ _, _ ->
+                       viewModel.deleteNote(notes[note])
                        notes.removeAt(note)
                        adapter.notifyItemRemoved(note)
                    }

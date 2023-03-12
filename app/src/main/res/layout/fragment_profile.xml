@@ -16,14 +16,14 @@
         android:paddingVertical="@dimen/d_16dp">
 
         <TextView
+            android:id="@+id/tv_user"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
             android:textSize="@dimen/d_20sp"
             android:layout_marginStart="@dimen/d_16dp"
-            android:textColor="@color/black"
-            android:text="Vitaly Gukov"/>
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tv_delete_profile"

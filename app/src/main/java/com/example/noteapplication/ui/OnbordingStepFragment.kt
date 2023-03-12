@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
 import com.example.noteapplication.extencions.replaceFragment
+import com.example.noteapplication.ui.authorization.AuthorizationFragment
 
 private var index = 0
 
