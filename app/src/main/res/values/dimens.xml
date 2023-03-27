@@ -18,4 +18,5 @@
     <dimen name="d_72dp">72dp</dimen>
     <dimen name="d_36sp">36sp</dimen>
     <dimen name="d_20sp">20sp</dimen>
+    <dimen name="d_22sp">22sp</dimen>
 </resources>

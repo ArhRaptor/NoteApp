@@ -1,4 +1,4 @@
-package com.example.noteapplication.ui.add
+package com.example.noteapplication.ui.dashboard.add
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -64,7 +64,11 @@ class AddNoteFragment : Fragment() {
 
             if (titleText.isNotEmpty() && messageText.isNotEmpty() && dateView.text.toString().trim().isNotEmpty()){
 
-                viewModel.addNote(Note(titleText, messageText, Date(date)))
+                viewModel.userId.observe(viewLifecycleOwner){userId ->
+                    viewModel.addNote(Note(null, titleText, messageText, Date(date), userId))
+                }
+
+                viewModel.getUserId(viewModel.getUser()?.email ?: "")
 
                 title.setText("")
                 message.setText("")

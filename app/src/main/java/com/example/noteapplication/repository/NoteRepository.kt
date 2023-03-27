@@ -1,21 +1,17 @@
 package com.example.noteapplication.repository
 
-import com.example.noteapplication.db.NotesStorage
+import com.example.noteapplication.db.DataBase
 import com.example.noteapplication.model.Note
 
 class NoteRepository {
 
-    fun addNote(note: Note) {
-        NotesStorage.notesList.add(note)
-    }
+    suspend fun addNote(note: Note) =  DataBase.noteDao?.addNote(note)
 
-    fun getNotesList(): ArrayList<Note> {
-        return NotesStorage.notesList
-    }
+    suspend fun getNotesList(userId: Long?): List<Note>? = DataBase.noteDao?.getNotes(userId)
 
-    fun getCountNotes() : Int = NotesStorage.notesList.size
+    suspend fun deleteNote(note: Note) = DataBase.noteDao?.deleteNote(note)
 
-    fun deleteAllNotes() {
-        NotesStorage.notesList.clear()
-    }
+    suspend fun deleteAllNotes(userId: Long?) = DataBase.noteDao?.deleteAllNotes(userId)
+
+    suspend fun findNote(text: String): List<Note>? = DataBase.noteDao?.findNote(text)
 }

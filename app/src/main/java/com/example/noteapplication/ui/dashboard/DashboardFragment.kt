@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.noteapplication.R
 import com.example.noteapplication.extencions.replaceFragment
-import com.example.noteapplication.ui.add.AddNoteFragment
-import com.example.noteapplication.ui.list.NotesListFragment
-import com.example.noteapplication.ui.profile.ProfileFragment
-import com.example.noteapplication.ui.search.SearchFragment
+import com.example.noteapplication.ui.dashboard.add.AddNoteFragment
+import com.example.noteapplication.ui.dashboard.list.NotesListFragment
+import com.example.noteapplication.ui.dashboard.profile.ProfileFragment
+import com.example.noteapplication.ui.dashboard.search.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardFragment : Fragment() {
