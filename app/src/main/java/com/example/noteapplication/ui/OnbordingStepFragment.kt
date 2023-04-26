@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.noteapplication.R
 import com.example.noteapplication.extencions.replaceFragment
-import com.example.noteapplication.ui.authorization.AuthorizationFragment
 
 private var index = 0
 
@@ -49,6 +49,6 @@ class OnbordingStepFragment : Fragment() {
 
     private fun finishList(){
         handler.removeCallbacksAndMessages(null)
-        parentFragmentManager.replaceFragment(R.id.fv_container, AuthorizationFragment())
+        findNavController().navigate(OnbordingStepFragmentDirections.actionOnbordingStepFragmentToAuthorizationFragment())
     }
 }

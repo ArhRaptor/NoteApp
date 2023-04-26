@@ -5,48 +5,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.noteapplication.R
-import com.example.noteapplication.extencions.replaceFragment
-import com.example.noteapplication.ui.dashboard.add.AddNoteFragment
-import com.example.noteapplication.ui.dashboard.list.NotesListFragment
-import com.example.noteapplication.ui.dashboard.profile.ProfileFragment
-import com.example.noteapplication.ui.dashboard.search.SearchFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.noteapplication.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
+    private var binding: FragmentDashboardBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        binding = FragmentDashboardBinding.inflate(inflater, container ,false)
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        childFragmentManager.replaceFragment(R.id.dashboard_container, NotesListFragment())
-
-        view.findViewById<BottomNavigationView>(R.id.bnv_navigation)
-            .setOnItemSelectedListener {
-                when (it.itemId) {
-                    R.id.home -> {
-                        childFragmentManager.replaceFragment(R.id.dashboard_container, NotesListFragment())
-                        return@setOnItemSelectedListener true
-                    }
-                    R.id.search -> {
-                        childFragmentManager.replaceFragment(R.id.dashboard_container, SearchFragment())
-                        return@setOnItemSelectedListener true
-                    }
-                    R.id.create_note -> {
-                        childFragmentManager.replaceFragment(R.id.dashboard_container, AddNoteFragment())
-                        return@setOnItemSelectedListener true
-                    }
-                    R.id.profile -> {
-                        childFragmentManager.replaceFragment(R.id.dashboard_container, ProfileFragment())
-                        return@setOnItemSelectedListener true
-                    }
-                    else -> {
-                        return@setOnItemSelectedListener true
-                    }
-                }
-            }
+        binding?.bnvNavigation?.setupWithNavController(
+            Navigation.findNavController(view.findViewById(R.id.dashboard_container))
+        )
     }
 }

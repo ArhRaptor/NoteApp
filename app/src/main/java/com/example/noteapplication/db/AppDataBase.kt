@@ -10,8 +10,6 @@ import com.example.noteapplication.utils.DateTypeConverter
 @Database(entities = [User::class, Note::class], version = 1)
 @TypeConverters(DateTypeConverter::class)
 abstract class AppDataBase : RoomDatabase() {
-
     abstract fun userDao() : UserDao
-
     abstract fun noteDao() : NoteDao
 }

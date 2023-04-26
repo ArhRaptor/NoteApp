@@ -10,13 +10,15 @@ import com.example.noteapplication.repository.UserPreferencesRepository
 import com.example.noteapplication.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class AddViewModel: ViewModel() {
+class AddViewModel @Inject constructor(
+    private val userRepository: UserRepository,
+    private val noteRepository: NoteRepository,
+    private val preferencesRepository: UserPreferencesRepository
+) : ViewModel() {
 
     val userId = MutableLiveData<Long>()
-    private val noteRepository = NoteRepository()
-    private val userRepository = UserRepository()
-    private val referencesRepository = UserPreferencesRepository
 
     fun addNote(note:Note) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -30,5 +32,5 @@ class AddViewModel: ViewModel() {
         }
     }
 
-    fun getUser(): User? = referencesRepository.getUser()
+    fun getUser(): User? = preferencesRepository.getUser()
 }
