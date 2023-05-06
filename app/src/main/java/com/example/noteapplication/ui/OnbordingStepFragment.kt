@@ -3,6 +3,7 @@ package com.example.noteapplication.ui
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +24,7 @@ class OnbordingStepFragment : Fragment() {
         R.layout.fragment_onbording_step4,
         R.layout.fragment_onbording_step5)
 
-    private val handler = Handler()
+    private val handler = Handler(Looper.myLooper()!!)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(fragments[index], container, false)
     }

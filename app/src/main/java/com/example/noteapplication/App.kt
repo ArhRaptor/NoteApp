@@ -6,7 +6,6 @@ import com.example.noteapplication.di.AppModule
 import com.example.noteapplication.di.ApplicationComponent
 import com.example.noteapplication.di.DaggerApplicationComponent
 import com.example.noteapplication.di.DataBaseModule
-import com.example.noteapplication.di.SharedPreferencesModule
 
 
 class App :Application() {
@@ -18,7 +17,6 @@ class App :Application() {
         applicationComponent = DaggerApplicationComponent.builder()
             .appModule(AppModule(this))
             .dataBaseModule(DataBaseModule())
-            .sharedPreferencesModule(SharedPreferencesModule())
             .build()
     }
 

@@ -1,17 +1,28 @@
 package com.example.noteapplication.repository
 
+import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import com.example.noteapplication.model.User
 import com.google.gson.Gson
 import javax.inject.Inject
+import javax.inject.Singleton
 
 private const val IS_START_APP = "is_start_app"
+private const val USER_PREFERENCES = "userPreferences"
 private const val IS_LOGIN = "is_login"
 private const val USER = "user"
+
+@Singleton
 class UserPreferencesRepository @Inject constructor(
-    private val userPreferences: SharedPreferences
+    context: Context
 ) {
+
+    private val userPreferences: SharedPreferences
+
+    init {
+        userPreferences = context.getSharedPreferences(USER_PREFERENCES, Context.MODE_PRIVATE)
+    }
 
     fun startApp() {
         userPreferences.edit {
