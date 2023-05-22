@@ -9,23 +9,24 @@ import com.example.noteapplication.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AuthorizationViewModel : ViewModel() {
+class AuthorizationViewModel(
+    private val userRepository: UserRepository,
+    private val preferencesRepository: UserPreferencesRepository
+) : ViewModel() {
 
     val user = MutableLiveData<User>()
-    private val repository = UserRepository()
-    private val preferencesRepository = UserPreferencesRepository
 
     fun getUser(email: String) {
-        viewModelScope.launch(Dispatchers.IO){
-            user.postValue(repository.getUser(email))
+        viewModelScope.launch(Dispatchers.IO) {
+            user.postValue(userRepository.getUser(email))
         }
     }
 
-    fun login(){
+    fun login() {
         preferencesRepository.login()
     }
 
-    fun putUser(user: User){
+    fun putUser(user: User) {
         preferencesRepository.putUser(user)
     }
 }

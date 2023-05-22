@@ -91,9 +91,10 @@
     <Button
         android:id="@+id/btn_add"
         style="@style/MainButton"
+        android:layout_marginTop="@dimen/d_36dp"
         android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_date" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

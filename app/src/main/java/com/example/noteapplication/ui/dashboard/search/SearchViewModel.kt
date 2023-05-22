@@ -7,11 +7,13 @@ import com.example.noteapplication.model.Note
 import com.example.noteapplication.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SearchViewModel:ViewModel() {
+class SearchViewModel @Inject constructor(
+    private val noteRepository: NoteRepository
+) :ViewModel() {
 
     val notesList =MutableLiveData<List<Note>>()
-    private val noteRepository = NoteRepository()
 
     fun findNote(text :String){
         viewModelScope.launch(Dispatchers.IO) {

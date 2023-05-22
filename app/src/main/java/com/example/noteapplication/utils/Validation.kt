@@ -1,6 +1,6 @@
-package com.example.noteapplication
+package com.example.noteapplication.utils
 
-    const val REGEX_EMAIL = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+    const val REGEX_EMAIL = "[A-Za-z\\d._%+-]+@[A-Za-z\\d.-]+\\.[A-Za-z]{2,6}"
     const val REGEX_NAME = "[a-zA-Zа-яёА-ЯЁ]{3,255}"
     const val REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{6,50}\$"
 

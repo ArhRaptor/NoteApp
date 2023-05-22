@@ -8,12 +8,15 @@ import com.example.noteapplication.repository.UserPreferencesRepository
 import com.example.noteapplication.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RegistrationViewModel : ViewModel() {
+class RegistrationViewModel @Inject constructor(
+    private val repository: UserRepository,
+    private val preferencesRepository: UserPreferencesRepository
+) : ViewModel() {
 
     val user = MutableLiveData<User>()
-    private val repository = UserRepository()
-    private val preferencesRepository = UserPreferencesRepository
+
 
     fun addUser(user: User) {
         viewModelScope.launch(Dispatchers.IO) {

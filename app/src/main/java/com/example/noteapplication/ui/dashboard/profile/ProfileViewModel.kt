@@ -10,15 +10,16 @@ import com.example.noteapplication.repository.UserPreferencesRepository
 import com.example.noteapplication.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ProfileViewModel: ViewModel() {
+class ProfileViewModel @Inject constructor(
+    private val userRepository: UserRepository,
+    private val noteRepository: NoteRepository,
+    private val preferencesRepository: UserPreferencesRepository
+) : ViewModel() {
 
     val notesList = MutableLiveData<List<Note>>()
     val userId = MutableLiveData<Long>()
-    private val noteRepository = NoteRepository()
-    private val userRepository = UserRepository()
-    private val preferencesRepository = UserPreferencesRepository
-
     fun deleteAllNotes(userId:Long) {
         viewModelScope.launch(Dispatchers.IO) {
             noteRepository.deleteAllNotes(userId)
